@@ -1,0 +1,69 @@
+/* Reset muy básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Página general */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* Contenedor principal */
+main, .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Título */
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+/* Grid de productos */
+#productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Tarjeta de producto */
+.product-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Imagen del producto */
+.product-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Texto del producto */
+.product-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* Precio destacado */
+.product-card p strong {
+  font-size: 1rem;
+  color: #16a34a;
+}
