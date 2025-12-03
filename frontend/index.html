@@ -9,10 +9,73 @@
 <body>
     <main class="container">
         <h1>📦 Catálogo de Productos</h1>
+         <nav class="auth-nav" id="authNav">
+                  <!-- 🔄 Este contenido se genera dinámicamente por JavaScript -->
+            </nav>
+        
+    
+
+         </nav>
        <button id="btnVerJSON">Ver JSON del servidor</button>
 
 <pre id="jsonOutput" style="background:#111111; color:rgb(33, 221, 33); padding:15px; margin-top:10px;">
 </pre>
+<section class="auth-section" id="authSection">
+    <div class="auth-container">
+
+        <div class="auth-form" id="loginForm">
+            <h3>🔑 Iniciar Sesión</h3>
+
+            <form id="loginFormElement">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Contraseña:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            </form>
+
+            <p class="auth-toggle">
+                ¿No tienes cuenta?
+                <a href="#" id="showRegister">Regístrate aquí</a>
+            </p>
+        </div>
+
+        <div class="auth-form hidden" id="registerForm">
+            <h3>📝 Crear Cuenta</h3>
+
+            <form id="registerFormElement">
+                <div class="form-group">
+                    <label for="registerNombre">Nombre completo:</label>
+                    <input type="text" id="registerNombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="registerEmail">Email:</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="registerPassword">Contraseña:</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Crear Cuenta</button>
+            </form>
+
+            <p class="auth-toggle">
+                ¿Ya tienes cuenta?
+                <a href="#" id="showLogin">Inicia sesión aquí</a>
+            </p>
+        </div>
+
+    </div>
+</section>
 
         
         <!-- Aquí aparecerán los productos en un grid -->
