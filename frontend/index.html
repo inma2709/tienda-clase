@@ -10,6 +10,8 @@
     <main class="container">
         <h1>📦 Catálogo de Productos</h1>
          <nav class="auth-nav" id="authNav">
+           
+
                   <!-- 🔄 Este contenido se genera dinámicamente por JavaScript -->
             </nav>
         
@@ -78,8 +80,83 @@
 </section>
 
         
-        <!-- Aquí aparecerán los productos en un grid -->
-        <div id="productsGrid"></div>
+        <!-- ====================================== -->
+        <!-- 📦 CATÁLOGO DE PRODUCTOS -->
+        <!-- ====================================== -->
+        <section class="productos-section">
+            <h2>🛍️ Nuestros Productos</h2>
+            <!-- Los productos se cargan dinámicamente aquí -->
+            <div id="productsGrid"></div>
+        </section>
+
+        <!-- ====================================== -->
+        <!-- 🛒 CARRITO DE COMPRAS (solo para usuarios logueados) -->
+        <!-- ====================================== -->
+        <section class="carrito-section" id="carritoSection">
+            <h2>🛒 Mi Carrito</h2>
+            <div id="carritoContainer">
+                <!-- El carrito se muestra dinámicamente aquí -->
+                <div id="carritoVacio" class="carrito-vacio">
+                    <p>Tu carrito está vacío</p>
+                    <p>¡Agrega algunos productos para empezar a comprar!</p>
+                </div>
+                
+                <!-- Lista de productos en el carrito -->
+                <div id="carritoProductos" class="carrito-productos hidden">
+                    <!-- Los productos del carrito aparecen aquí -->
+                </div>
+                
+                <!-- Total y botón de compra -->
+                <div id="carritoTotal" class="carrito-total hidden">
+                    <div class="total-info">
+                        <span class="total-label">Total: </span>
+                        <span class="total-amount" id="totalAmount">0.00€</span>
+                    </div>
+                    <button id="crearPedidoBtn" class="btn btn-success">
+                        🛍️ Crear Pedido
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================== -->
+        <!-- 📋 MIS PEDIDOS (solo para usuarios logueados) -->
+        <!-- ====================================== -->
+        <section class="pedidos-section" id="pedidosSection">
+            <h2>📋 Mis Pedidos</h2>
+            <div id="pedidosContainer">
+                <!-- Los pedidos se cargan dinámicamente aquí -->
+                <div id="pedidosVacio" class="pedidos-vacio">
+                    <p>No tienes pedidos aún</p>
+                    <p>¡Haz tu primera compra!</p>
+                </div>
+                
+                <!-- Lista de pedidos -->
+                <div id="pedidosList" class="pedidos-lista hidden">
+                    <!-- Los pedidos aparecen aquí -->
+                </div>
+            </div>
+        </section>
+         <section class="user-info hidden" id="userInfo">
+    <div class="user-card">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <img src="foto2.png" alt="Foto de perfil" class="profile-image">
+            </div>
+            
+            <div class="profile-info">
+                <h3>👤 Mi Perfil</h3>
+                <div id="userDetails"></div>
+            </div>
+        </div>
+        
+        <div class="profile-actions">
+            <button class="btn btn-danger" id="logoutBtn">
+                🚪 Cerrar Sesión
+            </button>
+        </div>
+    </div>
+</section>
     </main>
     
     <script src="app.js"></script>
